@@ -1,0 +1,70 @@
+body{
+  
+  color: #00ff2a44;
+  background-color: #f0ebda;
+  font-size: 1.2rem;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    
+    
+  color: #816b53;
+}
+.texto-cursivo{
+  font-family: 'Great Vibes', cursive;
+}
+
+h1{
+  font-size: 6em;
+}
+
+h2{
+  font-size: 4em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+h4{
+  font-size: 1.5em;
+}
+
+h5{
+  font-size: 1em;
+}
+.espacio{
+  color: #f0ebda;
+}
+#cuando{
+  align-items: center;
+  text-align: center;
+  padding-top: 10%;
+}
+
+/*Aplica los atributos menores de 768*/
+/*
+@media(min-width: 768px)
+{
+  .boton{
+    display: none;
+   
+  }
+  nav{
+
+    align-items: center;
+    
+    position: inherit;
+  }
+  ul{
+    flex-direction: row;
+  }
+  
+}
+*/
