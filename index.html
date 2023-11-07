@@ -8,35 +8,41 @@
 	<script src="css/main.js"></script>
 </head>
 <body>
-	<section class="d-flex justify-content-center">
-		<div class="text-center"> <img src="images/espacio.png"> </div>
-	</section>
-	<!--Cancion-->
-	<section class="d-flex justify-content-center"> <audio class="audio" loop autoplay="autoplay" controls id="audioelement">
-	        <source src="Musica.mp3" type="audio/mpeg">
-          </audio> </section>
-	<script>
-		var audioPlayed = false; // Variable para verificar si el audio ya se ha reproducido
-		
-		  window.addEventListener('load', function() {
-		    if (!audioPlayed) { // Verificar si el audio no se ha reproducido aún
-		      var audio = document.getElementById("myAudio");
-		      audio.play();
-		      audioPlayed = true; // Actualizar la variable para indicar que el audio se ha reproducido
-		    }
-		  });
-		
-	</script>
-	<!--Frase e Iniciales(img)-->
 	
-	<section class="d-flex justify-content-center">
-		<div class="text-center"> <img src="images/galeria/inicio_3.png"> </div>
-	</section>
-	<!--Estas invitado(img)-->
+    <!--Estas invitado(img)-->
 	<section class="d-flex justify-content-center">
 		<div class="text-center"> <img src="images/estasInvitado.png"> </div>
 	</section>
 	<!--CONTADOR-->
+    
+	<!-- Canción -->
+<section class="d-flex justify-content-center">
+    <audio class="audio" loop autoplay="autoplay" controls id="audioelement">
+      <source src="Musica.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+  <script>
+    var audioPlayed = false; // Variable para verificar si el audio ya se ha reproducido
+  
+    window.addEventListener('load', function() {
+      if (!audioPlayed) { // Verificar si el audio no se ha reproducido aún
+        var audio = document.getElementById("audioelement"); // Usar el ID correcto
+        audio.play();
+        audioPlayed = true; // Actualizar la variable para indicar que el audio se ha reproducido
+      }
+    });
+  </script>
+  
+	
+	<section class="d-flex justify-content-center">
+		<div class="text-center"> <img src="images/galeria/inicio_3.png"> </div>
+	</section>
+
+    <!--Faltan-->
+    <section class="d-flex justify-content-center">
+		<div class="text-center"> <img src="images/faltan.png"> </div>
+	</section>
+	
 	<section class="d-flex justify-content-center">
 		<div class="text-center">
 			<table class="texto-cursivo">
@@ -129,7 +135,7 @@
         //===
         // VARIABLES
         //===
-        const DATE_TARGET = new Date('11/18/2023 7:00 PM');
+        const DATE_TARGET = new Date('11/25/2023 7:00 PM');
         // DOM for render
         const SPAN_DAYS = document.querySelector('span#days');
         const SPAN_HOURS = document.querySelector('span#hours');
@@ -196,13 +202,7 @@
                     $(this).off("touchmove");
                 });
             });
-        
-            
-        
-            
-        
-           
-        
+         
         });
         
     </script>
@@ -250,26 +250,9 @@
 </section>
 <section class="d-flex justify-content-center">
     <div class="text-center">
-     <a href="https://www.pinterest.es/pin/852798879465211135" target="_blank"><img src="images/revisar.png"></a>
+     <a href="https://pin.it/vVxQbEC" target="_blank"><img src="images/revisar.png"></a>
     </div>
 </section>
-
-<!--NO NIÑOS KK-->
-
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <img src="images/noninos.png">
-    </div>
-</section>
-
-<!--NOSOTROS-->
-
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <img src="images/galeria/nosotros.png">
-    </div>
-</section>
-
 
 
 <!--REGALOS-->
@@ -277,17 +260,38 @@
     <div class="text-center">
      <img src="images/regalos.png">
     </div>
+</section>
+<section class="d-flex justify-content-center">
+    <div class="text-center">
 
+     <table style="align-content: center;">
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://maps.app.goo.gl/J1nQqTn5XRLcQH5X9" target="_blank"><img src="images/tienda.png"></a>
+                </td>
+
+                <td>
+                    <img src="images/espacio.png">
+                </td>
+
+                <td>
+                    <a href="images/qrregalo.png" download target="_blank"><img src="images/qr.png"></a>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
 
 </section>
 
+
+<!--NOSOTROS-->
+
 <section class="d-flex justify-content-center">
     <div class="text-center">
-        <!-- Agrega una etiqueta <a> para el enlace de descarga -->
-        <a href="images/qrregalo.png" download>
-            <!-- Agrega la imagen con un ancho máximo y centrado -->
-            <img src="images/qrregalo.png" style="max-width: 100%; display: block; margin: 0 auto;">
-        </a>
+     <img src="images/galeria/nosotros.png">
     </div>
 </section>
 
@@ -304,19 +308,27 @@
 
     <section class="d-flex justify-content-center">
         <div class="text-center">
-         <a href="https://api.whatsapp.com/send?phone=+59175177076&text=confirmo%20kkk" target="_blank"><img src="images/confirmar.png"></a>
+         <a href="https://api.whatsapp.com/send?phone=+59175177076&text=Hola!%F0%9F%91%8B%F0%9F%98%8A%20Cristian%20y%20Jael..!%20Su%20boda%20no%20me%20lo%20pierdo%20y%20quiero%20confirmar%20mi%20asistencia!%F0%9F%A4%A9%F0%9F%92%92%F0%9F%92%8D"
+          target="_blank"><img src="images/confirmar.png"></a>
         </div>
     </section>
-   
-    <section class="d-flex justify-content-center">
-        <div class="text-center">
-         <img src="images/ultimo.png">
 
-        
-        </div>
+    
+    <!--NO NIÑOS KK-->
 
+<section class="d-flex justify-content-center">
+    <div class="text-center">
+     <img src="images/noninos.png">
+    </div>
+</section>
 
-    </section>
+<!--Ultimo-->
+<section class="d-flex justify-content-center">
+    <div class="text-center">
+     <img src="images/ultimo.png">
+    </div>
+</section>
+
 
     </body>
 
