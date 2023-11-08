@@ -16,22 +16,25 @@
 	<!--CONTADOR-->
     
 	<!-- Canción -->
-<section class="d-flex justify-content-center">
-    <audio class="audio" loop autoplay="autoplay" controls id="audioelement">
-      <source src="Musica.mp3" type="audio/mpeg">
-    </audio>
-  </section>
-  <script>
+    <section class="d-flex justify-content-center">
+        <audio class="audio" loop autoplay="autoplay" controls id="audioelement" style="width: 500px; height: 200px;">
+          <source src="Musica.mp3" type="audio/mpeg">
+        </audio>
+      </section>
+      
+
+    <script>
     var audioPlayed = false; // Variable para verificar si el audio ya se ha reproducido
-  
+
     window.addEventListener('load', function() {
-      if (!audioPlayed) { // Verificar si el audio no se ha reproducido aún
+        if (!audioPlayed) { // Verificar si el audio no se ha reproducido aún
         var audio = document.getElementById("audioelement"); // Usar el ID correcto
         audio.play();
         audioPlayed = true; // Actualizar la variable para indicar que el audio se ha reproducido
-      }
+        }
     });
-  </script>
+    </script>
+
   
 	
 	<section class="d-flex justify-content-center">
