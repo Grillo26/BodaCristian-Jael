@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset=" utf-8">
-	<title>Invitacion Digital | Cristian & Jael</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/style.css">
-	<script src="css/main.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Invitación Digital | Cristian & Jael</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="css/main.js"></script>
+    </head>
+    <body>
 	
-    <!--Estas invitado(img)-->
-	<section class="d-flex justify-content-center">
-		<div class="text-center"> <img src="images/estasInvitado.png"> </div>
-	</section>
-	<!--CONTADOR-->
-    
-	<!-- Canción -->
-    <section class="d-flex justify-content-center">
-        <audio class="audio" loop autoplay="autoplay" controls id="audioelement" style="width: 500px; height: 200px;">
-          <source src="Musica.mp3" type="audio/mpeg">
-        </audio>
-      </section>
-      
+        <!--Estas invitado(img)-->
+        <section class="d-flex align-items-center justify-content-center">
+            <div class="text-center"> 
+                <img src="images/estasInvitado.png">
+            </div>
+        </section>
 
-    <script>
-    var audioPlayed = false; // Variable para verificar si el audio ya se ha reproducido
+        <!-- music -->
+        <section class="d-flex align-items-center justify-content-center">
+            <div class="text-center">
+                <audio id="music" preload="true">
+                    <source src="Musica.mp3">
+                </audio>
+                <div id="audioplayer">
+                    <i id="pButton" class="fas fa-play" onclick="togglePlay()"></i>
+                </div>
+            </div>
+        </section>
 
-    window.addEventListener('load', function() {
-        if (!audioPlayed) { // Verificar si el audio no se ha reproducido aún
-        var audio = document.getElementById("audioelement"); // Usar el ID correcto
-        audio.play();
-        audioPlayed = true; // Actualizar la variable para indicar que el audio se ha reproducido
-        }
-    });
-    </script>
+        <script>
+            var music = document.getElementById("music");
+            var pButton = document.getElementById("pButton");
+        
+            function togglePlay() {
+                if (music.paused) {
+                    music.play();
+                    pButton.className = "fas fa-pause";
+                } else {
+                    music.pause();
+                    pButton.className = "fas fa-play";
+                }
+            }
+        
+            // Agrega la siguiente línea para iniciar la música automáticamente al cargar la página
+            window.addEventListener("load", function () {
+                togglePlay();
+            });
+        </script>
 
-  
+
+        <section class="d-flex align-items-center justify-content-center">
+            <div class="text-center"> 
+                <img src="images/galeria/inicio_3.png"> 
+                <div class="arrow-container">
+                    <div class="arrow bounce" style="color: #e7e1dc;; font-size: 100px;">
+                        <i class="fas fa-angles-down "></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Faltan-->
+        <section class="d-flex justify-content-center">
+            <div class="text-center"> 
+                <img src="images/faltan.png"> </div>
+        </section>
 	
-	<section class="d-flex justify-content-center">
-		<div class="text-center"> <img src="images/galeria/inicio_3.png"> </div>
-	</section>
-
-    <!--Faltan-->
-    <section class="d-flex justify-content-center">
-		<div class="text-center"> <img src="images/faltan.png"> </div>
-	</section>
-	
-	<section class="d-flex justify-content-center">
-		<div class="text-center">
-			<table class="texto-cursivo">
-				<tbody>
+	    <section class="d-flex align-items-center justify-content-center">
+		    <div class="text-center">
+			    <table class="texto-cursivo">
+				    <tbody>
 					<tr>
 						<td>
 							<table>
@@ -72,67 +92,64 @@
 											</tr>
 										</tbody>
 									</table>
-								</td>
-								<td>
-									<table>
-										<tbody>
-											<tr>
-												<td style="padding-left: 15px; padding-right: 15px;">
-													<h2><span id="hours">00</span><h4><br> horas</h4></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding-left: 15px; padding-right: 15px;"><h2><span>:</span></h2>
+						</td>
+						<td>
+							<table>
+								<tbody>
+									<tr>
+										<td style="padding-left: 15px; padding-right: 15px;">
+										    <h2><span id="hours">00</span><h4><br> horas</h4></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding-left: 15px; padding-right: 15px;"><h2><span>:</span></h2>
 													<h4 class="espacio"><br>horas</h4></td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-								<td>
-									<table>
-										<tbody>
-											<tr>
-												<td style="padding-left: 15px; padding-right: 15px;">
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tbody>
+									<tr>
+										<td style="padding-left: 15px; padding-right: 15px;">
 													<h2><span id="minutes">00</span><h4><br> minutos</h4></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding-left: 15px; padding-right: 15px;"><h2><span>:</span></h2>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding-left: 15px; padding-right: 15px;"><h2><span>:</span></h2>
 													<h4 class="espacio"><br>minutos</h4></td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-								<td>
-									<table>
-										<tbody>
-											<tr>
-												<td style="padding-left: 15px; padding-right: 15px;">
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tbody>
+									<tr>
+										<td style="padding-left: 15px; padding-right: 15px;">
 													<h2><span id="seconds">00</span><h4><br> segundos</h4></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                   
-                </div>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-        </p>
-    </section> 
+        </section> 
         <!-- Fin contador regresivo -->
-    <script>
+        <script>
         document.addEventListener('DOMContentLoaded', () => { 
         
         //===
@@ -186,43 +203,16 @@
         </script>
         <!--*********************************************************************************-->
         
-    <script type="text/javascript">
-        
-        $(function () {
-        
-            $(".carousel").on("touchstart", function (event) {
-                var xClick = event.originalEvent.touches[0].pageX;
-                $(this).one("touchmove", function (event) {
-                    var xMove = event.originalEvent.touches[0].pageX;
-                    if (Math.floor(xClick - xMove) > 5) {
-                        $(this).carousel('next');
-                    }
-                    else if (Math.floor(xClick - xMove) < -5) {
-                        $(this).carousel('prev');
-                    }
-                });
-                $(".carousel").on("touchend", function () {
-                    $(this).off("touchmove");
-                });
-            });
-         
-        });
-        
-    </script>
-
-
+    
     <section class="d-flex justify-content-center">
         <div class="text-center">
-         <img src="images/ceremonia.png">
-
-        
+            <img src="images/ceremonia.png">
         </div>
     </section>
 
     <section class="d-flex justify-content-center">
         <div class="text-center">
-
-         <table style="align-content: center;">
+            <table style="align-content: center;">
             <tbody>
                 <tr>
                     <td>
@@ -239,98 +229,99 @@
                 </tr>
             </tbody>
 
-        </table>
+            </table>
         </div>
 
     </section>
 
-<!--VESTIMENTA-->
+    <!--VESTIMENTA-->
 
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <img src="images/vestimenta.png">
-    </div>
-</section>
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <a href="https://pin.it/vVxQbEC" target="_blank"><img src="images/revisar.png"></a>
-    </div>
-</section>
-
-
-<!--REGALOS-->
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <img src="images/regalos.png">
-    </div>
-</section>
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-
-     <table style="align-content: center;">
-        <tbody>
-            <tr>
-                <td>
-                    <a href="https://maps.app.goo.gl/J1nQqTn5XRLcQH5X9" target="_blank"><img src="images/tienda.png"></a>
-                </td>
-
-                <td>
-                    <img src="images/espacio.png">
-                </td>
-
-                <td>
-                    <a href="images/qrregalo.png" download target="_blank"><img src="images/qr.png"></a>
-                </td>
-            </tr>
-        </tbody>
-
-    </table>
-    </div>
-
-</section>
-
-
-<!--NOSOTROS-->
-
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <img src="images/galeria/nosotros.png">
-    </div>
-</section>
-
-
-
-<!--ASISTENCIA-->
     <section class="d-flex justify-content-center">
         <div class="text-center">
-         <img src="images/asistencia.png">
+        <img src="images/vestimenta.png">
         </div>
-
-
     </section>
 
     <section class="d-flex justify-content-center">
         <div class="text-center">
-         <a href="https://api.whatsapp.com/send?phone=+59175177076&text=Hola!%F0%9F%91%8B%F0%9F%98%8A%20Cristian%20y%20Jael..!%20Su%20boda%20no%20me%20lo%20pierdo%20y%20quiero%20confirmar%20mi%20asistencia!%F0%9F%A4%A9%F0%9F%92%92%F0%9F%92%8D"
-          target="_blank"><img src="images/confirmar.png"></a>
+        <a href="https://pin.it/vVxQbEC" target="_blank"><img src="images/revisar.png"></a>
         </div>
     </section>
+
+
+    <!--REGALOS-->
+    <section class="d-flex justify-content-center">
+        <div class="text-center">
+        <img src="images/regalos.png">
+        </div>
+    </section>
+    <section class="d-flex justify-content-center">
+        <div class="text-center">
+
+            <table style="align-content: center;">
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://maps.app.goo.gl/J1nQqTn5XRLcQH5X9" target="_blank"><img src="images/tienda.png"></a>
+                    </td>
+
+                    <td>
+                        <img src="images/espacio.png">
+                    </td>
+
+                    <td>
+                        <a href="images/qrregalo.png" download target="_blank"><img src="images/qr.png"></a>
+                    </td>
+                </tr>
+            </tbody>
+
+            </table>
+        </div>
+
+    </section>
+
+
+    <!--NOSOTROS-->
+
+    <section class="d-flex justify-content-center">
+        <div class="text-center">
+        <img src="images/galeria/nosotros.png">
+        </div>
+    </section>
+
+
+
+    <!--ASISTENCIA-->
+        <section class="d-flex justify-content-center">
+            <div class="text-center">
+            <img src="images/asistencia.png">
+            </div>
+
+
+        </section>
+
+        <section class="d-flex justify-content-center">
+            <div class="text-center">
+            <a href="https://api.whatsapp.com/send?phone=+59175177076&text=Hola!%F0%9F%91%8B%F0%9F%98%8A%20Cristian%20y%20Jael..!%20Su%20boda%20no%20me%20lo%20pierdo%20y%20quiero%20confirmar%20mi%20asistencia!%F0%9F%A4%A9%F0%9F%92%92%F0%9F%92%8D"
+            target="_blank"><img src="images/confirmar.png"></a>
+            </div>
+        </section>
 
     
-    <!--NO NIÑOS KK-->
+            <!--NO NIÑOS KK-->
 
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <img src="images/noninos.png">
-    </div>
-</section>
+        <section class="d-flex justify-content-center">
+            <div class="text-center">
+            <img src="images/noninos.png">
+            </div>
+        </section>
 
-<!--Ultimo-->
-<section class="d-flex justify-content-center">
-    <div class="text-center">
-     <img src="images/ultimo.png">
-    </div>
-</section>
+        <!--Ultimo-->
+        <section class="d-flex justify-content-center">
+            <div class="text-center">
+            <img src="images/ultimo.png">
+            </div>
+        </section>
 
 
     </body>

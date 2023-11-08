@@ -1,3 +1,9 @@
+html{
+  min-width: 1080px; /* Cambia el valor a tu preferencia */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
 body{
   
   color: #00ff2a44;
@@ -9,7 +15,102 @@ body{
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
 }
+.image-section {
+  max-width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto original */
+  /* Otros estilos específicos para la sección de imágenes */
+}
 
+/*<-------------AUDIO----------------->*/
+#mobile-box {
+  width: 360px;
+}
+
+.card {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.card .view {
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card h5 a {
+  color: #0d47a1;
+}
+
+.card h5 a:hover {
+  color: #072f6b;
+}
+
+#pButton {
+  float: left;
+  color: #8a6b51;
+  font-size: 70px; 
+}
+
+#timeline {
+  width: 90%;
+  height: 2px;
+  margin-top: 20px;
+  margin-left: 10px;
+  float: left;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#pButton {
+  margin-top: 12px;
+  cursor: pointer;
+  
+}
+
+#playhead {
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-top: -3px;
+  background: black;
+  cursor: pointer;
+}
+/*<-------------ENDAUDIO----------------->*/
+
+
+/*<-------------SCROLL INDICATOR----------------->*/
+.arrow-container {
+  width: 100%;
+  text-align: center;
+  padding-top: 100px; /* Ajusta la distancia desde la parte superior de la imagen */
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+/*<-------------END SCROLL INDICATOR----------------->*/
 
 h1, h2, h3, h4, h5, h6 {
     
